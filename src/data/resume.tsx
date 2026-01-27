@@ -129,7 +129,7 @@ export const DATA = {
         {
           type: "Live Demo",
           href: "https://scopematter.xyz",
-          // icon: <Icons.globe className="size-3" />, // Kept as placeholder for your component
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
@@ -156,7 +156,7 @@ export const DATA = {
         {
           type: "Live Demo",
           href: "https://student-bugdet-buddy-lyje.vercel.app/",
-          // icon: <Icons.globe className="size-3" />,
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/student-budget-buddy.png",
