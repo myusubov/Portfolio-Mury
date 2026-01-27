@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Murad Yusubov",
@@ -8,29 +8,24 @@ export const DATA = {
   location: "Baku, Azerbaijan",
   locationLink: "https://www.google.com/maps/place/Baku",
   description:
-    "Full-stack developer with 3+ years of experience building performant, scalable web applications with modern technologies.",
+    "Full-Stack Engineer & Frontend Team Lead specializing in resilient, event-driven web systems and AI orchestration using Next.js, Node.js, and TypeScript",
   summary:
-    "I'm Murad Yusubov, an 18-year-old self-taught full-stack developer with 3+ years of experience shipping production code. I've led frontend teams, built complex CRM platforms from scratch, and delivered features serving real users. I specialize in React, Next.js, TypeScript, Node.js, and PostgreSQL, building scalable SaaS platforms, CRM systems, and financial management apps. Expert in REST APIs, GraphQL, Tailwind CSS, and modern JavaScript. I'm driven by impact: building software that works, scales, and solves real problems.",
+    "I design autonomous web systems with an emphasis on transactional integrity and system resiliency. I currently work as a Frontend Team Lead at Allyos.ai, where I translate complex data models into high-performance, interactive user interfaces. My engineering ideology is based on eliminating ambiguity through deterministic state machines and robust validation layers. I have experience in developing 'Trust Engines,' which are systems that incorporate asynchronous worker patterns, circuit breakers for external API calls, and type safety to achieve reliability without requiring constant human intervention. I work as a registered entrepreneur based in Azerbaijan, offering a low-friction partnership model for international engineering teams.",
 
   avatarUrl: "/me.png",
 
   skills: [
-    "JavaScript",
     "TypeScript",
-    "React",
-    "Next.js",
-    "Remix",
-    "React Router",
-    "Node.js",
-    "Express",
-    "Prisma",
-    "PostgreSQL",
-    "MongoDB",
-    "TailwindCSS",
-    "AWS",
-    "Firebase",
-    "Clerk",
-    "Git",
+    "Next.js 15",
+    "Node.js & Express",
+    "PostgreSQL & Prisma",
+    "Redis (Caching & Queues)", // Combines write-through and BullMQ
+    "Zod (Data Validation)", // Explains what you use Zod for
+    "BullMQ (Background Jobs)", // Points to TailorCV
+    "AI Integration (RAG)",
+    "API Resiliency (Circuit Breakers)", // Points to SBB
+    "Docker",
+    "AWS (EC2/S3)",
   ],
 
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
@@ -62,8 +57,20 @@ export const DATA = {
 
   work: [
     {
+      company: "Allyos.ai",
+      href: "https://app.allyos.ai",
+      badges: [],
+      location: "Remote",
+      title: "Frontend Team Lead",
+      logoUrl: "/logo-allyos.jpg",
+      start: "May 2025",
+      end: "Present",
+      description:
+        "Directing a team of 3 engineers in the architecture and delivery of an enterprise AI-CRM. I established the core frontend infrastructure using Next.js, implementing a high-performance component library featuring complex keyboard-driven navigation and dynamic drag-and-drop state management. I standardized a contract-first development workflow by integrating GraphQL Codegen, which eliminated type mismatches between services and reduced cross-team integration time by 30%. I am responsible for code reviews, database-to-UI data mapping, and ensuring system scalability for high-concurrency enterprise users.",
+    },
+    {
       company: "ASCND",
-      href: "https://ascnd.tv",
+      href: "https://dev.ascnd.tv",
       badges: [],
       location: "Remote",
       title: "Frontend Developer",
@@ -71,122 +78,89 @@ export const DATA = {
       start: "February 2025",
       end: "May 2025",
       description:
-        "Architected and shipped the complete frontend for a creator monetization platform enabling content creators to monetize through subscription tiers and pay-per-view models. Designed and implemented a sophisticated video access control system with granular tier-based permissions, allowing creators to offer partial content access (e.g., 10-minute preview for basic tier, full access for premium). Integrated Stripe payment processing to handle multiple subscription packages and one-time purchases. Engineered scalable component architecture using Remix and React Router, establishing API contracts with backend team to optimize data fetching patterns. Delivered production-grade authentication flows, content locking mechanisms, and responsive UI with TailwindCSS.",
+        "Engineered a creator monetization platform utilizing Remix and Stripe. I architected the multi-tier subscription engine and implemented a secure video-gating system with robust permission logic for pay-per-view content. Focused on transaction reliability by managing Stripe Webhook integrations to ensure real-time access synchronization across distributed user states, while optimizing the UI for low-latency media playback.",
     },
-    {
-      company: "Softsync",
-      href: "https://app.softsync.ai",
-      badges: [],
-      location: "Remote",
-      title: "Frontend Team Lead",
-      logoUrl: "/logo-softsync.jpg",
-      start: "May 2025",
-      end: "Present",
-      description:
-        "Leading frontend development for an enterprise CRM platform (Folk.app-inspired) serving a 14-person team. Architected core UI infrastructure including a production-ready table component supporting multiple data types, keyboard navigation, and dynamic column reordering. Designed and implemented drag-and-drop pipeline views and modular entity management system (Deals, Companies, People). Manage a team of 2 frontend developers while delivering critical features: AI-powered workspace analytics tool, intelligent merge suggestions with manual and automatic workflows, entity enrichment, and email integration with custom sender support. Established GraphQL integration with Codegen for type-safe API consumption. Implemented comprehensive error tracking (Sentry) and analytics (PostHog). Built scalable component library with Next.js, TypeScript, ShadCN UI, and Tailwind CSS, ensuring consistent performance across Pipeline, Table, and Groups view types.",
-    },
-    // {
-    //   company: "OnlyGamers",
-    //   href: null,
-    //   badges: [],
-    //   location: "Remote",
-    //   title: "Frontend Developer",
-    //   logoUrl: "/onlygamers.png",
-    //   start: "April 2024",
-    //   end: "July 2024",
-    //   description:
-    //     "Developed core UI infrastructure and content management tools for a social gaming platform. Created a reusable component library with Next.js and TailwindCSS, implementing responsive layouts optimized for gaming content. Improved application performance by implementing code splitting and lazy loading strategies, reducing initial bundle size through dynamic imports. Contributed to platform infrastructure modernization by refactoring components for modularity and establishing consistent design patterns, setting the foundation for the platform's evolution into ASCND.",
-    // },
   ],
 
-  education: [
-    {
-      school: "Giresun University",
-      href: "https://giresun.edu.tr",
-      degree: "Bachelor's Degree in Computer Science",
-      logoUrl: "/giresun-university.png",
-      start: "November 2024",
-      end: "2028 (Expected)",
-    },
-  ],
+  education: [],
 
   projects: [
-    {
-      title: "Student Budget Buddy",
-      href: "https://github.com/Biolater/student-budget-buddy",
-      dates: "Feb 2025 – May 2025",
-      active: false,
+    /*     {
+      title: "TailorCV",
+      href: "https://github.com/Biolater/tailorcv",
+      dates: "Dec 2025 – Present",
+      active: true,
       description:
-        "Financial management platform designed for students to track spending, manage budgets, and gain AI-powered insights. Features multi-currency support with real-time conversion, intelligent budget management with automatic expense linking, and recurring transactions with flexible frequencies. Integrated ChatGPT API for natural language financial queries and built interactive dashboard with spending trends and category breakdowns.",
+        "An AI-orchestration platform for high-volume resume tailoring. I engineered an asynchronous processing pipeline using BullMQ and Redis to handle intensive LLM workloads without blocking the event loop. The system utilizes a custom heuristic compression algorithm to optimize context window usage, reducing token overhead by 40% while maintaining high-fidelity output.",
       technologies: [
-        "Next.js",
-        "TypeScript",
+        "Next.js 15",
+        "Node.js",
+        "BullMQ & Redis",
+        "OpenAI API",
         "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Clerk",
-        "Express.js",
-        "ChatGPT API",
-        "Charts.js",
+        "SSE (Server-Sent Events)",
       ],
       links: [
         {
-          type: "GitHub (Frontend)",
-          href: "https://github.com/Biolater/Student-Budget-Buddy",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "GitHub (Backend)",
-          href: "https://github.com/Biolater/Student-Budget-Buddy-Backend",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
           type: "Live Demo",
-          href: "https://student-bugdet-buddy-lyje.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+          href: "https://tailorcv.com",
         },
       ],
-      image: "/student-budget-buddy.png",
-      video: ""
-    },
+      image: "/tailorcv-mockup.png",
+      video: "",
+    }, */
     {
       title: "ScopeMatter",
       href: "https://github.com/Biolater/scopematter",
       dates: "Jul 2025 – Oct 2025",
-      active: false,
+      active: true,
       description:
-        "Micro-SaaS preventing scope creep for freelancers through structured workflows from requests to change orders. Includes secure project sharing, professional PDF exports, and analytics—built to validate subscription model viability.",
+        "A project governance platform that enforces financial integrity via deterministic state machines. I engineered a Change-Order system that prevents orphaned revenue by restricting mutations based on project scope status. Features include SHA-256 token-hashed share links for unauthenticated access and automated PDF generation for legally-binding project documentation.",
       technologies: [
         "Next.js 15",
         "TypeScript",
         "Prisma",
         "PostgreSQL",
-        "TailwindCSS",
         "Clerk",
         "HeroUI",
-        "Supabase",
-        "Express.js",
-        "Redis",
+        "Redis (Write-through Caching)",
       ],
       links: [
         {
-          type: "GitHub (Frontend)",
-          href: "https://github.com/Biolater/scopematter",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "GitHub (Backend)",
-          href: "https://github.com/Biolater/scopematter-be",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
           type: "Live Demo",
           href: "https://scopematter.xyz",
-          icon: <Icons.globe className="size-3" />,
+          // icon: <Icons.globe className="size-3" />, // Kept as placeholder for your component
         },
       ],
       image: "",
-      video: "https://9nghnaawajmv9mqf.public.blob.vercel-storage.com/scopematter",
+      video:
+        "https://9nghnaawajmv9mqf.public.blob.vercel-storage.com/scopematter",
+    },
+    {
+      title: "Student Budget Buddy",
+      href: "https://github.com/Biolater/student-budget-buddy",
+      dates: "Feb 2025 – May 2025",
+      active: true,
+      description:
+        "A resilient multi-currency financial engine handling AZN, TRY, USD, and EUR. I implemented a Circuit Breaker pattern with static fallback matrices to ensure system availability during external exchange-rate API outages. The platform utilizes a RAG-lite pipeline (Retrieval-Augmented Generation) to provide deterministic spending advice by injecting real user transaction data into LLM context windows.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Express.js",
+        "OpenAI API (RAG)",
+        "Clerk",
+        "Zod (Data Validation)",
+      ],
+      links: [
+        {
+          type: "Live Demo",
+          href: "https://student-bugdet-buddy-lyje.vercel.app/",
+          // icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/student-budget-buddy.png",
+      video: "",
     },
   ],
 } as const;
