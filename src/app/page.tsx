@@ -211,7 +211,7 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me an{" "}
                 <a
-                  href="mailto:muradyusubovdev@icloud.com"
+                  href={DATA.contact.social.Email.url}
                   className="underline"
                 >
                   email
@@ -219,7 +219,7 @@ export default function Page() {
                 or connect via{" "}
                 <a
                   className="underline"
-                  href="https://linkedin.com/in/murad-yusubov"
+                  href={DATA.contact.social.LinkedIn.url}
                 >
                   LinkedIn
                 </a>

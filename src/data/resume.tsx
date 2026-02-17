@@ -1,12 +1,21 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
 
+export const EMAIL_ADDRESS = "me@muradyusubov.dev";
+
+export const LINKS = {
+  github: "https://github.com/myusubov",
+  linkedin: "https://linkedin.com/in/murad-yusubov",
+  email: "me@muradyusubov.dev",
+  googleMaps: "https://www.google.com/maps/place/Baku",
+} as const;
+
 export const DATA = {
   name: "Murad Yusubov",
   initials: "MY",
-  url: "https://muradyusubov.com",
+  url: "https://muradyusubov.dev",
   location: "Baku, Azerbaijan",
-  locationLink: "https://www.google.com/maps/place/Baku",
+  locationLink: LINKS.googleMaps,
   description:
     "Full-Stack Engineer & Frontend Team Lead specializing in resilient, event-driven web systems and AI orchestration using Next.js, Node.js, and TypeScript",
   summary:
@@ -31,24 +40,24 @@ export const DATA = {
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
 
   contact: {
-    email: "muradyusubovdev@icloud.com",
+    email: LINKS.email,
     tel: "+994709224340",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/biolater",
+        url: LINKS.github,
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/murad-yusubov",
+        url: LINKS.linkedin,
         icon: Icons.linkedin,
         navbar: true,
       },
       Email: {
         name: "Send Email",
-        url: "mailto:muradyusubovdev@icloud.com",
+        url: `mailto:${LINKS.email}`,
         icon: Icons.email,
         navbar: true,
       },
@@ -88,7 +97,7 @@ export const DATA = {
     /*     {
       title: "TailorCV",
       href: "https://github.com/Biolater/tailorcv",
-      dates: "Dec 2025 – Present",
+      dates: "Dec 2025 \u2013 Present",
       active: true,
       description:
         "An AI-orchestration platform for high-volume resume tailoring. I engineered an asynchronous processing pipeline using BullMQ and Redis to handle intensive LLM workloads without blocking the event loop. The system utilizes a custom heuristic compression algorithm to optimize context window usage, reducing token overhead by 40% while maintaining high-fidelity output.",
@@ -111,8 +120,8 @@ export const DATA = {
     }, */
     {
       title: "ScopeMatter",
-      href: "https://github.com/Biolater/scopematter",
-      dates: "Jul 2025 – Oct 2025",
+      href: "https://github.com/myusubov/scopematter",
+      dates: "Jul 2025 \u2013 Oct 2025",
       active: true,
       description:
         "A project governance platform that enforces financial integrity via deterministic state machines. I engineered a Change-Order system that prevents orphaned revenue by restricting mutations based on project scope status. Features include SHA-256 token-hashed share links for unauthenticated access and automated PDF generation for legally-binding project documentation.",
@@ -138,8 +147,8 @@ export const DATA = {
     },
     {
       title: "Student Budget Buddy",
-      href: "https://github.com/Biolater/student-budget-buddy",
-      dates: "Feb 2025 – May 2025",
+      href: "https://github.com/myusubov/student-budget-buddy",
+      dates: "Feb 2025 \u2013 May 2025",
       active: true,
       description:
         "A resilient multi-currency financial engine handling AZN, TRY, USD, and EUR. I implemented a Circuit Breaker pattern with static fallback matrices to ensure system availability during external exchange-rate API outages. The platform utilizes a RAG-lite pipeline (Retrieval-Augmented Generation) to provide deterministic spending advice by injecting real user transaction data into LLM context windows.",
@@ -164,3 +173,8 @@ export const DATA = {
     },
   ],
 } as const;
+
+export type Project = (typeof DATA.projects)[number];
+export type Work = (typeof DATA.work)[number];
+
+
