@@ -17,49 +17,61 @@ export const DATA = {
   location: "Baku, Azerbaijan",
   locationLink: LINKS.googleMaps,
   description:
-    "Full-Stack Engineer & Frontend Team Lead specializing in resilient, event-driven web systems and AI orchestration using Next.js, Node.js, and TypeScript",
+    "Full-Stack Developer | React, Next.js, TypeScript, Node.js, Express.js | Building product features for startups and SaaS teams",
   summary:
-    "I design autonomous web systems with an emphasis on transactional integrity and system resiliency. I currently work as a Frontend Team Lead at Allyos.ai, where I translate complex data models into high-performance, interactive user interfaces. My engineering ideology is based on eliminating ambiguity through deterministic state machines and robust validation layers. I have experience in developing 'Trust Engines,' which are systems that incorporate asynchronous worker patterns, circuit breakers for external API calls, and type safety to achieve reliability without requiring constant human intervention. I work as a registered entrepreneur based in Azerbaijan, offering a low-friction partnership model for international engineering teams.",
+    "Full-Stack Developer working with React, Next.js, TypeScript, Node.js, and Express.js. For eleven months (June 2025 to April 2026), I worked as a remote contract developer on AllyOS, an AI-native CRM product, where I led frontend architecture for its core interfaces: complex data tables, Kanban-style pipelines, and the client-side caching strategy that kept them fast as the product grew. I also led two other frontend developers, reviewing pull requests and setting conventions. Self-taught since December 2022, I moved from small learning projects into real contract product work. Right now I'm building TailorCV, an AI-assisted resume platform for developers, centered on a GitHub Extractor that analyzes a user's repositories to generate evidence-backed resume content. I'm looking for remote full-stack roles at small startups and early-stage SaaS teams, ideally founder-led or CTO-led, where I can own product features end to end.",
 
   avatarUrl: "/me.png",
 
   skills: [
+    "React",
+    "Next.js",
     "TypeScript",
-    "Next.js 15",
+    "Tailwind CSS",
     "Node.js & Express",
     "PostgreSQL & Prisma",
-    "Redis (Caching & Queues)", // Combines write-through and BullMQ
-    "Zod (Data Validation)", // Explains what you use Zod for
-    "BullMQ (Background Jobs)", // Points to TailorCV
-    "AI Integration (RAG)",
-    "API Resiliency (Circuit Breakers)", // Points to SBB
-    "Docker",
-    "AWS (EC2/S3)",
+    "Redis",
+    "GraphQL & GraphQL Codegen",
+    "Zod (Data Validation)",
+    "Auth & OAuth (Clerk)",
+    "GitHub API Integration",
+    "Automated Testing (Playwright, Vitest)",
+    "AWS",
   ],
 
-  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+  // navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
 
   contact: {
     email: LINKS.email,
-    tel: "+994709224340",
+    // tel: "+994709224340",
     social: {
       GitHub: {
         name: "GitHub",
         url: LINKS.github,
         icon: Icons.github,
         navbar: true,
+        isResume: false,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: LINKS.linkedin,
         icon: Icons.linkedin,
         navbar: true,
+        isResume: false,
       },
       Email: {
         name: "Send Email",
         url: `mailto:${LINKS.email}`,
         icon: Icons.email,
         navbar: true,
+        isResume: false,
+      },
+      Resume: {
+        name: "Resume",
+        url: "#",
+        icon: Icons.resume,
+        navbar: true,
+        isResume: true,
       },
     },
   },
@@ -71,104 +83,43 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Frontend Team Lead",
-      logoUrl: "/logo-allyos.jpg",
-      start: "May 2025",
-      end: "Present",
+      logoUrl: "/logo-allyos.svg",
+      start: "June 2025",
+      end: "April 2026",
       description:
-        "Directing a team of 3 engineers in the architecture and delivery of an enterprise AI-CRM. I established the core frontend infrastructure using Next.js, implementing a high-performance component library featuring complex keyboard-driven navigation and dynamic drag-and-drop state management. I standardized a contract-first development workflow by integrating GraphQL Codegen, which eliminated type mismatches between services and reduced cross-team integration time by 30%. I am responsible for code reviews, database-to-UI data mapping, and ensuring system scalability for high-concurrency enterprise users.",
-    },
-    {
-      company: "ASCND",
-      href: "https://dev.ascnd.tv",
-      badges: [],
-      location: "Remote",
-      title: "Frontend Developer",
-      logoUrl: "/logo.png",
-      start: "February 2025",
-      end: "May 2025",
-      description:
-        "Engineered a creator monetization platform utilizing Remix and Stripe. I architected the multi-tier subscription engine and implemented a secure video-gating system with robust permission logic for pay-per-view content. Focused on transaction reliability by managing Stripe Webhook integrations to ensure real-time access synchronization across distributed user states, while optimizing the UI for low-latency media playback.",
+        "Led frontend architecture as tech lead for an AI-native CRM, guiding two other frontend developers through code review and shared conventions. Built the CRM's core interactive systems: a virtualized, filterable data table and a drag-and-drop Kanban pipeline with per-column pagination and configurable fields. Diagnosed repeated loading-state issues caused by an SSR-heavy data layer, and led the move to a client-cache architecture with TanStack Query, fixing navigation responsiveness across the core workflows. Set up GraphQL Codegen to generate frontend types directly from the backend schema, catching frontend/backend mismatches at compile time.",
     },
   ],
 
   education: [],
 
   projects: [
-    /*     {
+    {
       title: "TailorCV",
-      href: "https://github.com/Biolater/tailorcv",
+      href: "https://github.com/myusubov/tailorcv",
       dates: "Dec 2025 \u2013 Present",
       active: true,
       description:
-        "An AI-orchestration platform for high-volume resume tailoring. I engineered an asynchronous processing pipeline using BullMQ and Redis to handle intensive LLM workloads without blocking the event loop. The system utilizes a custom heuristic compression algorithm to optimize context window usage, reducing token overhead by 40% while maintaining high-fidelity output.",
+        "AI-assisted resume platform for developers, still in active development. Self-taught and project-heavy developers often have strong proof of work sitting in GitHub repos with no easy way to turn it into resume content. The current core is a GitHub-based extractor: connect your account, select up to three repositories, and a deterministic analysis pipeline detects project shape, tech stack hints, and frontend/backend areas directly from the repo tree, no AI involved at this stage. That structured evidence feeds a base resume with section editors, autosave, a live A4-style preview, and undo/redo. Auth is fully custom through Clerk, including OAuth, OTP verification, and protected routes. The next phase is the AI layer that turns the extracted evidence into resume content.",
       technologies: [
-        "Next.js 15",
-        "Node.js",
-        "BullMQ & Redis",
-        "OpenAI API",
-        "PostgreSQL",
-        "SSE (Server-Sent Events)",
-      ],
-      links: [
-        {
-          type: "Live Demo",
-          href: "https://tailorcv.com",
-        },
-      ],
-      image: "/tailorcv-mockup.png",
-      video: "",
-    }, */
-    {
-      title: "ScopeMatter",
-      href: "https://github.com/myusubov/scopematter",
-      dates: "Jul 2025 \u2013 Oct 2025",
-      active: true,
-      description:
-        "A project governance platform that enforces financial integrity via deterministic state machines. I engineered a Change-Order system that prevents orphaned revenue by restricting mutations based on project scope status. Features include SHA-256 token-hashed share links for unauthenticated access and automated PDF generation for legally-binding project documentation.",
-      technologies: [
-        "Next.js 15",
+        "Next.js 16",
+        "React 19",
         "TypeScript",
-        "Prisma",
-        "PostgreSQL",
+        "Express",
+        "PostgreSQL & Prisma",
+        "Redis",
         "Clerk",
-        "HeroUI",
-        "Redis (Write-through Caching)",
+        "TanStack Query",
+        "Zod",
+        "Playwright & Vitest",
       ],
       links: [
-        {
-          type: "Live Demo",
-          href: "https://scopematter.xyz",
-          icon: <Icons.globe className="size-3" />,
-        },
+        // {
+        //   type: "Live Demo",
+        //   href: "https://tailorcv.xyz",
+        // },
       ],
-      image: "",
-      video:
-        "https://9nghnaawajmv9mqf.public.blob.vercel-storage.com/scopematter",
-    },
-    {
-      title: "Student Budget Buddy",
-      href: "https://github.com/myusubov/student-budget-buddy",
-      dates: "Feb 2025 \u2013 May 2025",
-      active: true,
-      description:
-        "A resilient multi-currency financial engine handling AZN, TRY, USD, and EUR. I implemented a Circuit Breaker pattern with static fallback matrices to ensure system availability during external exchange-rate API outages. The platform utilizes a RAG-lite pipeline (Retrieval-Augmented Generation) to provide deterministic spending advice by injecting real user transaction data into LLM context windows.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Express.js",
-        "OpenAI API (RAG)",
-        "Clerk",
-        "Zod (Data Validation)",
-      ],
-      links: [
-        {
-          type: "Live Demo",
-          href: "https://student-bugdet-buddy-lyje.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/student-budget-buddy.png",
+      image: "/tailorcv-repo-selection-temp.png",
       video: "",
     },
   ],
@@ -176,5 +127,3 @@ export const DATA = {
 
 export type Project = (typeof DATA.projects)[number];
 export type Work = (typeof DATA.work)[number];
-
-
